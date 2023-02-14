@@ -43,8 +43,6 @@ jobs:
       with:
         php-version: '8.2'
     - uses: actions/checkout@v3
-    - name: cat .env.local
-      run: cat .env.local
     - name: Copy .env.test.local
       run: php -r "file_exists('.env.test') || copy('.env.test', '.env.local');"
     - name: cat .env.local
