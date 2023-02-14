@@ -20,8 +20,6 @@ jobs:
         # service environment variables
         # `POSTGRES_HOST` is `postgres`
         env:
-          # optional (defaults to `postgres`)
-          POSTGRES_DB: postgres_db
           # required
           POSTGRES_PASSWORD: postgres_password
           # optional (defaults to `5432`)
@@ -59,9 +57,5 @@ jobs:
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
-    - name: Install PostgreSQL client
-      run: |
-        apt-get update
-        apt-get install --yes postgresql-client
     - name: test bin/console Create Database
       run: bin/console doctrine:database:create
