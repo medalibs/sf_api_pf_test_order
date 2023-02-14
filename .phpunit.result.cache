@@ -1,0 +1,1 @@
+{"version":1,"defects":{"App\\Tests\\InvoiceCalculatorTest::testCalculate":3},"times":{"App\\Tests\\InvoiceCalculatorTest::testCalculate":0.004,"App\\Tests\\InvoiceCalculatorTest::testPriceBelowThresholdCalculate":0.004,"App\\Tests\\InvoiceCalculatorTest::testPriceAboveThresholdCalculate":0}}
