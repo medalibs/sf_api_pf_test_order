@@ -59,5 +59,7 @@ jobs:
       run: vendor/bin/phpunit
     - name: Create Database
       run: bin/console doctrine:database:create
+    - name: Generate a migration by comparing your current database to your mapping information.
+      run: bin/console doctrine:migrations:diff
     - name: Execute a migration to a specified version or the latest available version.
       run: bin/console doctrine:migrations:migrate
